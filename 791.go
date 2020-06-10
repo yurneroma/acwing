@@ -27,30 +27,21 @@ func main() {
 }
 
 func add(sliceA, sliceB []int) []int {
-	i := 0
 	newSlice := make([]int, 0)
-	agrev := 0
-	for i < len(sliceA) && i < len(sliceB) {
-		res := sliceA[i] + sliceB[i] + agrev
-		val := res % 10
-		agrev = res / 10
-		newSlice = append(newSlice, val)
-		i++
+	if len(sliceA) < len(sliceB) {
+		return add(sliceB, sliceA)
 	}
-	if i == len(sliceA) && i == len(sliceB) {
-		if agrev > 0 {
-			newSlice = append(newSlice, 1)
+	t := 0
+	for i := 0; i < len(sliceA); i++ {
+		t += sliceA[i]
+		if i < len(sliceB) {
+			t += sliceB[i]
 		}
-	} else {
-		for i < len(sliceA) {
-			newSlice = append(newSlice, (sliceA[i] + agrev))
-			i++
-		}
-		for i < len(sliceB) {
-			newSlice = append(newSlice, (sliceB[i] + agrev))
-			i++
-		}
+		newSlice = append(newSlice, t%10)
+		t /= 10
 	}
-
+	if t > 0 {
+		newSlice = append(newSlice, 1)
+	}
 	return newSlice
 }
