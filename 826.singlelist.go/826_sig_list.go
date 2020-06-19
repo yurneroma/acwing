@@ -8,13 +8,10 @@ var elem = make([]int, M)
 var next = make([]int, M)
 
 //head 头结点下标，  idx: 当前已经用到了哪个点
-var head, idx int
+var head, idx = -1, 0
 
-func init() {
-	head = -1
-	idx = 0
-}
 func main() {
+	//init()
 	m := 0
 	fmt.Scanf("%d", &m)
 	for ; m > 0; m-- {
