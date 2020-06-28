@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51a3a808-ccae-45ce-817f-f8c26a74916e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/acwing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/merge_set.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/merge_sort.go" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.14.3/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1dwszDFccWQVcxFRYHzcRyuzAaW" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build merge_set.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="acwing" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/merge_set.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build merge_set.go" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="590" y="307" key="#Go_Modules" timestamp="1593347771003">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state x="590" y="307" key="#Go_Modules/-1920.23.1920.1057/0.23.1680.963@0.23.1680.963" timestamp="1593347771003" />
+    <state width="1612" height="220" key="GridCell.Tab.0.bottom" timestamp="1593347893959">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state width="1612" height="220" key="GridCell.Tab.0.bottom/-1920.23.1920.1057/0.23.1680.963@0.23.1680.963" timestamp="1593347893959" />
+    <state width="1612" height="220" key="GridCell.Tab.0.center" timestamp="1593347893958">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state width="1612" height="220" key="GridCell.Tab.0.center/-1920.23.1920.1057/0.23.1680.963@0.23.1680.963" timestamp="1593347893958" />
+    <state width="1612" height="220" key="GridCell.Tab.0.left" timestamp="1593347893957">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state width="1612" height="220" key="GridCell.Tab.0.left/-1920.23.1920.1057/0.23.1680.963@0.23.1680.963" timestamp="1593347893957" />
+    <state width="1612" height="220" key="GridCell.Tab.0.right" timestamp="1593347893958">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state width="1612" height="220" key="GridCell.Tab.0.right/-1920.23.1920.1057/0.23.1680.963@0.23.1680.963" timestamp="1593347893958" />
+    <state x="224" y="56" key="SettingsEditor" timestamp="1593347860232">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state x="224" y="56" key="SettingsEditor/-1920.23.1920.1057/0.23.1680.963@0.23.1680.963" timestamp="1593347860232" />
+  </component>
+</project>
