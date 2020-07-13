@@ -2,21 +2,23 @@ package main
 
 import "fmt"
 
+func main() {
+	var n int
+	fmt.Scanf("%d", &n)
+	dfs(0, n)
+
+}
+
 const N = 10
 
-var n int
 var path [N]int
 var st [N]bool
 
-func main() {
-	fmt.Scanf("%d", &n)
-	dfs(0)
-}
-
-func dfs(u int) {
+//dfs implements
+func dfs(u, n int) {
 	if u == n {
-		for i := 1; i <= n; i++ {
-			fmt.Printf("%d", path[i])
+		for i := 0; i < n; i++ {
+			fmt.Printf("%d ", path[i])
 		}
 		fmt.Println("")
 		return
@@ -25,10 +27,8 @@ func dfs(u int) {
 		if st[i] == false {
 			path[u] = i
 			st[i] = true
-			dfs(u + 1)
+			dfs(u+1, n)
 			st[i] = false
-
 		}
 	}
-
 }
