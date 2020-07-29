@@ -43,14 +43,11 @@ func bfs() int {
 	queue = append(queue, 1)
 	for len(queue) > 0 {
 		t := queue[0]
-		fmt.Println("cur t is ", t)
 		queue = queue[1:]
 		for i := h[t]; i != -1; i = ne[i] {
 			val := e[i]
-			fmt.Println("val ", val)
 			if dis[val] == -1 {
 				dis[val] = dis[t] + 1
-				fmt.Println("dis val ", dis[val])
 				queue = append(queue, val)
 			}
 		}
@@ -58,7 +55,7 @@ func bfs() int {
 	return dis[n]
 }
 
-const N = 110
+const N = 100010
 
 var e [N]int
 var ne [N * 2]int
@@ -75,11 +72,10 @@ func add(a, b int) {
 func main() {
 	m := 0
 	fmt.Scanf("%d%d", &n, &m)
-	for i := 0; i < n; i++ {
+	for i := 0; i < N; i++ {
 		dis[i] = -1
 		h[i] = -1
 	}
-	fmt.Println(n, m)
 	for i := 0; i < m; i++ {
 		a, b := 0, 0
 		fmt.Scanf("%d%d", &a, &b)
