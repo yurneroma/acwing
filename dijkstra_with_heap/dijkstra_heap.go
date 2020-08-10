@@ -25,22 +25,23 @@ func add(a, b, c int) {
 var n, m int
 
 func main() {
-	// fmt.Scanf("%d%d", &n, &m)
-	// for i := 0; i < N; i++ {
-	// 	h[i] = -1
-	// }
+	fmt.Scanf("%d%d", &n, &m)
+	for i := 0; i < N; i++ {
+		h[i] = -1
+	}
 
-	// //邻接表存储图
-	// for ; m > 0; m-- {
-	// 	a, b, c := 0, 0, 0
-	// 	fmt.Scanf("%d%d%d", &a, &b, &c)
-	// 	add(a, b, c)
-	// }
-	dijkstra()
+	//邻接表存储图
+	for ; m > 0; m-- {
+		a, b, c := 0, 0, 0
+		fmt.Scanf("%d%d%d", &a, &b, &c)
+		add(a, b, c)
+	}
+	val := dijkstra()
+	fmt.Println(val)
 }
 
 var dist [N]int
-var st [N]int
+var st [N]bool
 
 type Item struct {
 	Ver int
@@ -61,10 +62,16 @@ func (heap *Heap) Init() {
 
 func (heap *Heap) Push(item *Item) {
 	*heap = append(*heap, item)
+	heap.Up()
 }
 
 func (heap *Heap) Up() {
-
+	n := heap.Len()
+	for i := n; i > 1; i = i / 2 {
+		if (*heap)[i-1].Dis < (*heap)[i/2-1].Dis {
+			heap.Swap((i - 1), (i/2 - 1))
+		}
+	}
 }
 
 func (heap *Heap) Swap(i, j int) {
@@ -89,14 +96,20 @@ func (heap *Heap) Down(idx int) {
 }
 
 func (heap *Heap) Pop() {
-
+	old := heap
+	n := heap.Len()
+	(*heap)[0] = (*heap)[n-1]
+	(*old)[n-1] = nil
+	*heap = (*old)[:n-1]
+	heap.Down(0)
 }
-func (heap *Heap) Top() {
 
-}
-
-func (heap *Heap) Update() {
-
+func (heap *Heap) Top() *Item {
+	if heap.Len() > 0 {
+		return (*heap)[0]
+	} else {
+		return nil
+	}
 }
 
 func (heap *Heap) Print() {
@@ -119,14 +132,12 @@ func dijkstra() int {
 
 	heap := make(Heap, 0)
 	heap.Push(item)
-	heap.Init()
 
 	for len(heap) > 0 {
 		t := heap.Top()
 		heap.Pop()
 
 		ver := t.Ver
-		dis := t.Dis
 		if st[ver] {
 			continue
 		}
