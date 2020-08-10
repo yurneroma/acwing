@@ -70,6 +70,8 @@ func (heap *Heap) Up() {
 	for i := n; i > 1; i = i / 2 {
 		if (*heap)[i-1].Dis < (*heap)[i/2-1].Dis {
 			heap.Swap((i - 1), (i/2 - 1))
+		} else {
+			break
 		}
 	}
 }
@@ -120,7 +122,7 @@ func (heap *Heap) Print() {
 }
 func dijkstra() int {
 	for i := 0; i < N; i++ {
-		dist[i] = 0x3f3f3f3f
+		dist[i] = 0x3f
 	}
 
 	dist[1] = 0
