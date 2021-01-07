@@ -2,11 +2,33 @@ package main
 
 import (
 	"bufio"
+	"fmt"
+	"os"
 	"strconv"
 	"strings"
 )
 
+const N = 1010
+
+var f [N]int
+
 func main() {
+	n := 0
+	fmt.Scanln(&n)
+	rd := bufio.NewReader(os.Stdin)
+	intArr := readline(rd)
+	maxNum := 0
+	//force search
+	for i := 0; i < len(intArr); i++ {
+		f[i] = 1
+		for j := 0; j < i; j++ {
+			if intArr[j] < intArr[i] {
+				f[i] = max(f[i], f[j]+1)
+			}
+		}
+		maxNum = max(maxNum, f[i])
+	}
+	fmt.Println(maxNum)
 
 }
 
