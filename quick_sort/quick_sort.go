@@ -31,9 +31,9 @@ func quickSort(q *[N]int, l, r int) {
 		return
 	}
 
+	x := q[(l+r)>>1]
 	i := l - 1
 	j := r + 1
-	x := q[(l+r)>>1]
 
 	for i < j {
 		for {
@@ -42,14 +42,12 @@ func quickSort(q *[N]int, l, r int) {
 				break
 			}
 		}
-
 		for {
 			j--
 			if q[j] <= x {
 				break
 			}
 		}
-
 		if i < j {
 			q[i], q[j] = q[j], q[i]
 		}
@@ -57,4 +55,5 @@ func quickSort(q *[N]int, l, r int) {
 
 	quickSort(q, l, j)
 	quickSort(q, j+1, r)
+
 }
