@@ -33,31 +33,33 @@ func mergeSort(q, tmp []int, l, r int) {
 	for i <= mid && j <= r {
 		if q[i] <= q[j] {
 			tmp[k] = q[i]
-			k++
 			i++
+			k++
 		} else {
 			tmp[k] = q[j]
 			k++
 			j++
 		}
+
 	}
 
 	for i <= mid {
 		tmp[k] = q[i]
-		i++
 		k++
+		i++
 	}
+
 	for j <= r {
 		tmp[k] = q[j]
 		k++
 		j++
 	}
 
-	i = l
 	j = 0
+	i = l
 	for i <= r {
 		q[i] = tmp[j]
-		j++
 		i++
+		j++
 	}
 }

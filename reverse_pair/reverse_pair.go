@@ -22,6 +22,7 @@ func mergeSort(q, tmp []int, l, r int) int64 {
 	}
 
 	mid := (l + r) >> 1
+
 	var res int64
 	res += mergeSort(q, tmp, l, mid)
 	res += mergeSort(q, tmp, mid+1, r)
@@ -29,11 +30,12 @@ func mergeSort(q, tmp []int, l, r int) int64 {
 	i := l
 	j := mid + 1
 	k := 0
+
 	for i <= mid && j <= r {
 		if q[i] <= q[j] {
 			tmp[k] = q[i]
-			k++
 			i++
+			k++
 		} else {
 			tmp[k] = q[j]
 			k++
@@ -44,22 +46,19 @@ func mergeSort(q, tmp []int, l, r int) int64 {
 
 	for i <= mid {
 		tmp[k] = q[i]
-		k++
 		i++
-
+		k++
 	}
 	for j <= r {
 		tmp[k] = q[j]
-		k++
 		j++
+		k++
 	}
 
-	i = l
 	j = 0
-	for i <= r {
+	for i := l; i <= r; i++ {
 		q[i] = tmp[j]
 		j++
-		i++
 	}
 
 	return res
