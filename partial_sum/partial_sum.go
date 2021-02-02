@@ -10,7 +10,7 @@ func main() {
 
 	for i := 1; i <= n; i++ {
 		fmt.Scan(&q[i])
-		partialSum[i] += partialSum[i-1] + q[i]
+		partialSum[i] = partialSum[i-1] + q[i]
 	}
 
 	for ; m > 0; m-- {
