@@ -28,11 +28,11 @@ func main() {
 		}
 
 		if q[l] != x {
-			fmt.Println("-1 -1 ")
+			fmt.Println("-1 -1")
 		} else {
 			fmt.Printf("%d ", l)
-			l := 0
-			r := n - 1
+			l = 0
+			r = n - 1
 			for l < r {
 				mid = (l + r + 1) >> 1
 				if q[mid] > x {
@@ -41,8 +41,9 @@ func main() {
 					l = mid
 				}
 			}
-			fmt.Println(l)
-		}
-	}
+			fmt.Printf("%d \n", l)
 
+		}
+
+	}
 }

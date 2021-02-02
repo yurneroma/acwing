@@ -16,5 +16,6 @@ func main() {
 			l = mid
 		}
 	}
+
 	fmt.Printf("%.6f", mid)
 }
